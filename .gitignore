@@ -1,18 +1,86 @@
-*.iml
-.kotlin
-.gradle
+#####################################################
+# Android / Jetpack Compose Project .gitignore
+# Organized for clarity and maintainability
+#####################################################
+
+# ────────────────────────────────
+# Project & Build System
+# ────────────────────────────────
+.gradle/
+build/
 **/build/
-xcuserdata
+!gradle/wrapper/gradle-wrapper.jar
 !src/**/build/
+
+# ────────────────────────────────
+# IntelliJ / Android Studio
+# ────────────────────────────────
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# ────────────────────────────────
+# Local Configuration
+# ────────────────────────────────
 local.properties
-.idea
-.DS_Store
-captures
-.externalNativeBuild
-.cxx
+.env
+
+# ────────────────────────────────
+# Android-Specific Generated Files
+# ────────────────────────────────
+captures/
+.externalNativeBuild/
+.cxx/
+obj/
+*.apk
+*.ap_
+*.dex
+*.class
+
+# ────────────────────────────────
+# Compose / Kotlin Artifacts
+# ────────────────────────────────
+*.kotlin_module
+*.kotlin
+**/compose-snapshots/
+**/.preview/
+
+# ────────────────────────────────
+# Multiplatform (iOS / Xcode)
+# ────────────────────────────────
+xcuserdata/
 *.xcodeproj/*
 !*.xcodeproj/project.pbxproj
 !*.xcodeproj/xcshareddata/
 !*.xcodeproj/project.xcworkspace/
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
+
+# ────────────────────────────────
+# Logs & Reports
+# ────────────────────────────────
+*.log
+**/test-results/
+**/reports/
+
+# ────────────────────────────────
+# Keystores & Sensitive Files
+# ────────────────────────────────
+*.jks
+*.keystore
+
+# ────────────────────────────────
+# Generated / Temporary Files
+# ────────────────────────────────
+*.tmp
+*.temp
+navigation.json
+output.json
+
+# ────────────────────────────────
+# Miscellaneous
+# ────────────────────────────────
+.DS_Store
+Thumbs.db
