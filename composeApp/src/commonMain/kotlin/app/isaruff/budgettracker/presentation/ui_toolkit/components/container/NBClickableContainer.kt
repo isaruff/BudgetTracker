@@ -84,6 +84,7 @@ fun NBClickableContainer(
                 shape = AppTheme.shapes.small
             )
             .clickable(
+                indication = null,
                 enabled = enabled,
                 interactionSource = interactionSource,
                 onClick = onClick
