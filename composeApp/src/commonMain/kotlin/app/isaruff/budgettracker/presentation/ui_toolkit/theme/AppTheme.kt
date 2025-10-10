@@ -5,7 +5,7 @@ import androidx.compose.runtime.CompositionLocalProvider
 
 @Composable
 fun AppTheme(
-    isDarkTheme: Boolean,
+    isDarkTheme: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val colorScheme = if (isDarkTheme) DarkNeobrutalColorScheme else LightNeobrutalColorScheme
