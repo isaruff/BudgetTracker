@@ -7,7 +7,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 
-val LocalAppTypography = staticCompositionLocalOf<Typography> { error("Typography is not provided") }
+val LocalTypography = staticCompositionLocalOf<Typography> { error("Typography is not provided") }
 
 val AppTypography
     @Composable
