@@ -9,6 +9,7 @@ val LocalDimens = staticCompositionLocalOf { DefaultAppDimensions }
 data class AppDimensions(
     val spacingXs: Dp,
     val spacingSm: Dp,
+    val spacingMs: Dp,
     val spacingMd: Dp,
     val spacingLg: Dp,
     val spacingXl: Dp,
@@ -17,6 +18,7 @@ data class AppDimensions(
     val cornerMd: Dp,
     val cornerLg: Dp,
     val borderThin: Dp,
+    val borderMedium: Dp,
     val borderThick: Dp,
     val iconSizeSm: Dp,
     val iconSizeMd: Dp,
@@ -28,6 +30,7 @@ data class AppDimensions(
 val DefaultAppDimensions = AppDimensions(
     spacingXs = 4.dp,
     spacingSm = 8.dp,
+    spacingMs = 12.dp,
     spacingMd = 16.dp,
     spacingLg = 24.dp,
     spacingXl = 32.dp,
@@ -36,6 +39,7 @@ val DefaultAppDimensions = AppDimensions(
     cornerMd = 8.dp,
     cornerLg = 16.dp,
     borderThin = 2.dp,
+    borderMedium = 3.dp,
     borderThick = 4.dp,
     iconSizeSm = 16.dp,
     iconSizeMd = 24.dp,
