@@ -13,7 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
-import app.isaruff.budgettracker.presentation.ui_toolkit.components.container.NBFocusableContainer
+import app.isaruff.budgettracker.presentation.ui_toolkit.components.container.focusable.NBFocusableContainer
 import app.isaruff.budgettracker.presentation.ui_toolkit.theme.AppTheme
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
@@ -148,7 +148,7 @@ fun NeobrutalistTextFieldExamples() {
         ) {
             Text(
                 "Neobrutalist TextField Examples",
-                style = MaterialTheme.typography.headlineMedium,
+                style = AppTheme.typography.headlineLarge,
                 fontWeight = androidx.compose.ui.text.font.FontWeight.Bold
             )
 
