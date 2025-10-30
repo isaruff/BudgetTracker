@@ -8,7 +8,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
-import app.isaruff.budgettracker.presentation.ui_toolkit.components.container.clickable.NBClickableContainer
+import app.isaruff.budgettracker.presentation.ui_toolkit.components.container.core.clickable.NBClickableContainer
 import app.isaruff.budgettracker.presentation.ui_toolkit.theme.AppTheme
 import org.jetbrains.compose.ui.tooling.preview.Preview
 

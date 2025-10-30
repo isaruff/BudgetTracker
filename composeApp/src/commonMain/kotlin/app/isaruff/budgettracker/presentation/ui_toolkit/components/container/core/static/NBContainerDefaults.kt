@@ -1,9 +1,9 @@
-package app.isaruff.budgettracker.presentation.ui_toolkit.components.container.clickable
+package app.isaruff.budgettracker.presentation.ui_toolkit.components.container.core.static
 
 import androidx.compose.runtime.Composable
 import app.isaruff.budgettracker.presentation.ui_toolkit.theme.AppTheme
 
-object NBCLickableContainerDefaults {
+object NBContainerDefaults {
 
     val Shape
         @Composable

@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
-import app.isaruff.budgettracker.presentation.ui_toolkit.components.container.static.NBContainer
+import app.isaruff.budgettracker.presentation.ui_toolkit.components.container.core.static.NBContainer
 import app.isaruff.budgettracker.presentation.ui_toolkit.theme.AppTheme
 import org.jetbrains.compose.resources.DrawableResource
 

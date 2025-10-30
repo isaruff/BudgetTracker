@@ -6,19 +6,18 @@ import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.LocalTextStyle
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
-import app.isaruff.budgettracker.presentation.ui_toolkit.components.container.focusable.NBFocusableContainer
+import app.isaruff.budgettracker.presentation.ui_toolkit.components.container.core.focusable.NBFocusableContainer
 import app.isaruff.budgettracker.presentation.ui_toolkit.theme.AppTheme
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
-fun NeobrutalistTextField(
+fun NBTextField(
     value: String,
     onValueChange: (String) -> Unit,
     modifier: Modifier = Modifier,
@@ -32,7 +31,6 @@ fun NeobrutalistTextField(
     prefix: @Composable (() -> Unit)? = null,
     suffix: @Composable (() -> Unit)? = null,
     supportingText: @Composable (() -> Unit)? = null,
-    isError: Boolean = false,
     visualTransformation: VisualTransformation = VisualTransformation.None,
     keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
     keyboardActions: KeyboardActions = KeyboardActions.Default,
@@ -67,7 +65,7 @@ fun NeobrutalistTextField(
             decorationBox = { innerTextField ->
                 NBFocusableContainer(
                     modifier = Modifier.fillMaxWidth(),
-                    interactionSource = interactionSource
+                    interactionSource = interactionSource,
                 ) {
                     TextStyleProvider {
                         Row(modifier = Modifier.padding(AppTheme.dimens.spacingSm)) {
@@ -153,7 +151,7 @@ fun NeobrutalistTextFieldExamples() {
             )
 
             // Basic TextField
-            NeobrutalistTextField(
+            NBTextField(
                 value = text1,
                 onValueChange = { text1 = it },
                 label = { Text("Email") },
@@ -162,7 +160,7 @@ fun NeobrutalistTextFieldExamples() {
             )
 
             // TextField with Icons
-            NeobrutalistTextField(
+            NBTextField(
                 value = text2,
                 onValueChange = { text2 = it },
                 label = { Text("Username") },
@@ -172,7 +170,7 @@ fun NeobrutalistTextFieldExamples() {
             )
 
             // Multiline TextField
-            NeobrutalistTextField(
+            NBTextField(
                 value = text3,
                 onValueChange = { text3 = it },
                 label = { Text("Description") },
@@ -183,12 +181,11 @@ fun NeobrutalistTextFieldExamples() {
             )
 
             // Error State
-            NeobrutalistTextField(
+            NBTextField(
                 value = text4,
                 onValueChange = { text4 = it },
                 label = { Text("Password") },
                 placeholder = { Text("Enter password") },
-                isError = text4.length < 8 && text4.isNotEmpty(),
                 supportingText = {
                     if (text4.length < 8 && text4.isNotEmpty()) {
                         Text("Password must be at least 8 characters")

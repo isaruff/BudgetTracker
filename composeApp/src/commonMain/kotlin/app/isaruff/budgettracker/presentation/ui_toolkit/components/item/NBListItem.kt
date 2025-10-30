@@ -11,7 +11,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import app.isaruff.budgettracker.presentation.ui_toolkit.components.container.static.NBContainer
+import app.isaruff.budgettracker.presentation.ui_toolkit.components.container.core.static.NBContainer
 import app.isaruff.budgettracker.presentation.ui_toolkit.theme.AppTheme
 import budgettracker.composeapp.generated.resources.Res
 import budgettracker.composeapp.generated.resources.compose_multiplatform

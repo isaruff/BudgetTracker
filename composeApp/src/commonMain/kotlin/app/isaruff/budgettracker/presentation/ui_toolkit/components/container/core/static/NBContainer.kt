@@ -1,4 +1,4 @@
-package app.isaruff.budgettracker.presentation.ui_toolkit.components.container.static
+package app.isaruff.budgettracker.presentation.ui_toolkit.components.container.core.static
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -17,7 +17,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
-import app.isaruff.budgettracker.presentation.ui_toolkit.components.container.static.NBContainerDefaults
 import app.isaruff.budgettracker.presentation.ui_toolkit.theme.AppTheme
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
