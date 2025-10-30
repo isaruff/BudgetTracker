@@ -17,6 +17,7 @@ val LightGrayText = Color(0xFFB8C2CC)
 
 data class AppColorScheme(
     val background: Color,
+    val onBackground: Color,
     val surface: Color,
     val primary: Color,
     val onPrimary: Color,
@@ -32,6 +33,7 @@ data class AppColorScheme(
 
 val LightNeobrutalColorScheme = AppColorScheme(
     background = OffWhite,
+    onBackground = DeepNavy,
     surface = PureWhite,
     primary = OrangeAccent,
     onPrimary = DeepNavy,
@@ -47,6 +49,7 @@ val LightNeobrutalColorScheme = AppColorScheme(
 
 val DarkNeobrutalColorScheme = AppColorScheme(
     background = DeepNavy,
+    onBackground = OffWhite,
     surface = NavySurface,
     primary = TealPop,
     onPrimary = OffWhite,
