@@ -7,6 +7,7 @@ import androidx.compose.ui.unit.dp
 val LocalDimens = staticCompositionLocalOf { DefaultAppDimensions }
 
 data class AppDimensions(
+    val spacingZero: Dp,
     val spacingXs: Dp,
     val spacingSm: Dp,
     val spacingMs: Dp,
@@ -14,6 +15,7 @@ data class AppDimensions(
     val spacingLg: Dp,
     val spacingXl: Dp,
     val cornerNone: Dp,
+    val cornerXsm: Dp,
     val cornerSm: Dp,
     val cornerMd: Dp,
     val cornerLg: Dp,
@@ -28,6 +30,7 @@ data class AppDimensions(
 )
 
 val DefaultAppDimensions = AppDimensions(
+    spacingZero = 0.dp,
     spacingXs = 4.dp,
     spacingSm = 8.dp,
     spacingMs = 12.dp,
@@ -35,6 +38,7 @@ val DefaultAppDimensions = AppDimensions(
     spacingLg = 24.dp,
     spacingXl = 32.dp,
     cornerNone = 0.dp,
+    cornerXsm = 2.dp,
     cornerSm = 4.dp,
     cornerMd = 8.dp,
     cornerLg = 16.dp,

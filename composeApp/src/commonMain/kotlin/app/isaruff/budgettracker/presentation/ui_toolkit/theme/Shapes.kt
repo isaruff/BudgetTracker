@@ -8,6 +8,7 @@ val LocalAppShapes = staticCompositionLocalOf<AppShapes> { error("Shapes not pro
 
 data class AppShapes(
     val flat: RoundedCornerShape,
+    val xsmall: RoundedCornerShape,
     val small: RoundedCornerShape,
     val medium: RoundedCornerShape,
     val large: RoundedCornerShape
@@ -19,6 +20,7 @@ val DefaultAppShapes: AppShapes
         val dimens = AppTheme.dimens
         return AppShapes(
             flat = RoundedCornerShape(dimens.cornerNone),
+            xsmall = RoundedCornerShape(dimens.cornerXsm),
             small = RoundedCornerShape(dimens.cornerSm),
             medium = RoundedCornerShape(dimens.cornerMd),
             large = RoundedCornerShape(dimens.cornerLg)
