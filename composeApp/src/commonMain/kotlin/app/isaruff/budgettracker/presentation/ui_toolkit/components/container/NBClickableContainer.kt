@@ -23,6 +23,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
+import app.isaruff.budgettracker.presentation.ui_toolkit.modifier.noRippleClickable
 import app.isaruff.budgettracker.presentation.ui_toolkit.theme.AppTheme
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
@@ -83,8 +84,7 @@ fun NBClickableContainer(
                 color = AppTheme.color.accent,
                 shape = AppTheme.shapes.small
             )
-            .clickable(
-                indication = null,
+            .noRippleClickable(
                 enabled = enabled,
                 interactionSource = interactionSource,
                 onClick = onClick

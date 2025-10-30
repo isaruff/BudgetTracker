@@ -14,6 +14,7 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import app.isaruff.budgettracker.presentation.ui_toolkit.components.bottombar.ItemPosition.Companion.getPosition
+import app.isaruff.budgettracker.presentation.ui_toolkit.modifier.noRippleClickable
 import app.isaruff.budgettracker.presentation.ui_toolkit.theme.AppTheme
 import budgettracker.composeapp.generated.resources.Res
 import budgettracker.composeapp.generated.resources.compose_multiplatform
@@ -68,7 +69,7 @@ private fun Item(
             .background(
                 color = backgroundColor
             )
-            .clickable(
+            .noRippleClickable(
                 enabled = enabled,
                 onClick = { onClick(data) }
             )
