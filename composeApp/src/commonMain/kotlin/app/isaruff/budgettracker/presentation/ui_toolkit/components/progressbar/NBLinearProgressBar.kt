@@ -1,4 +1,4 @@
-package app.isaruff.budgettracker.presentation.ui_toolkit.components.datavisualiser.progressbar
+package app.isaruff.budgettracker.presentation.ui_toolkit.components.progressbar
 
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.Canvas
@@ -32,7 +32,7 @@ fun NBLinearProgressbar(
 ) {
     Canvas(
         modifier = modifier
-            .height(AppTheme.dimens.spacingMd)
+            .height(NBLinearProgressBarDefaults.Height)
             .fillMaxWidth()
             .clip(shape)
             .border(
@@ -78,8 +78,8 @@ enum class Stroke {
 
     fun toCornerRadiusDp(): Dp {
         return when (this) {
-            Stroke.Square -> 0.dp
-            Stroke.Circle -> Int.MAX_VALUE.dp
+            Square -> 0.dp
+            Circle -> Int.MAX_VALUE.dp
         }
     }
 }

@@ -1,4 +1,4 @@
-package app.isaruff.budgettracker.presentation.ui_toolkit.components.datavisualiser.progressbar
+package app.isaruff.budgettracker.presentation.ui_toolkit.components.progressbar
 
 import androidx.compose.runtime.Composable
 import app.isaruff.budgettracker.presentation.ui_toolkit.theme.AppTheme
