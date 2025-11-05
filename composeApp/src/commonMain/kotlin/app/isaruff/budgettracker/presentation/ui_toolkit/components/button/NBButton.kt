@@ -26,17 +26,14 @@ fun NBButton(
         interactionSource = interactionSource,
         onClick = onClick
     ) {
-        Box(
-            modifier = Modifier.fillMaxWidth(),
-            contentAlignment = Alignment.Center
-        ) {
-            Text(
-                modifier = Modifier.padding(AppTheme.dimens.spacingSm),
-                text = text,
-                textAlign = TextAlign.Center,
-                style = AppTheme.typography.labelLarge
-            )
-        }
+        Text(
+            modifier = Modifier
+                .align(Alignment.Center)
+                .padding(AppTheme.dimens.spacingSm),
+            text = text,
+            textAlign = TextAlign.Center,
+            style = AppTheme.typography.labelLarge
+        )
     }
 }
 

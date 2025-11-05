@@ -26,7 +26,12 @@ data class AppDimensions(
     val iconSizeMd: Dp,
     val iconSizeLg: Dp,
     val elevationFlat: Dp,
-    val elevationSlight: Dp
+    val elevationSlight: Dp,
+    val containerSizeXs: Dp,
+    val containerSizeSm: Dp,
+    val containerSizeMd: Dp,
+    val containerSizeLg: Dp,
+    val containerSizeXl: Dp,
 )
 
 val DefaultAppDimensions = AppDimensions(
@@ -49,6 +54,11 @@ val DefaultAppDimensions = AppDimensions(
     iconSizeMd = 24.dp,
     iconSizeLg = 32.dp,
     elevationFlat = 0.dp,
-    elevationSlight = 2.dp
+    elevationSlight = 2.dp,
+    containerSizeXs = 16.dp,
+    containerSizeSm = 32.dp,
+    containerSizeMd = 64.dp,
+    containerSizeLg = 112.dp,
+    containerSizeXl = 152.dp
 )
 

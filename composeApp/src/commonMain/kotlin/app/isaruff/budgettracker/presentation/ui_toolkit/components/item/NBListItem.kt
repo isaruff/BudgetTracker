@@ -9,9 +9,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import app.isaruff.budgettracker.presentation.ui_toolkit.components.container.core.static.NBContainer
+import app.isaruff.budgettracker.presentation.ui_toolkit.components.container.core.static.NBContainerDefaults
 import app.isaruff.budgettracker.presentation.ui_toolkit.theme.AppTheme
 import budgettracker.composeapp.generated.resources.Res
 import budgettracker.composeapp.generated.resources.compose_multiplatform
@@ -29,8 +32,20 @@ fun NBListItem(
     verticalPadding: Dp = AppTheme.dimens.spacingSm,
     horizontalPadding: Dp = AppTheme.dimens.spacingMd,
     spacingBetween: Dp = AppTheme.dimens.spacingMd,
+    shape: Shape = NBContainerDefaults.Shape,
+    background: Color = NBContainerDefaults.BackgroundColor,
+    borderColor: Color = NBContainerDefaults.BorderColor,
+    contentColor: Color = NBContainerDefaults.ContentColor,
+    elevation: Dp = NBContainerDefaults.Elevation,
 ) {
-    NBContainer(modifier = modifier) {
+    NBContainer(
+        modifier = modifier,
+        shape = shape,
+        background = background,
+        borderColor = borderColor,
+        contentColor = contentColor,
+        elevation = elevation
+    ) {
         Row(
             modifier = Modifier
                 .padding(horizontal = horizontalPadding, vertical = verticalPadding)
