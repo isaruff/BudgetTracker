@@ -50,7 +50,7 @@ private fun NBChipPrev() {
                 horizontalArrangement = Arrangement.spacedBy(AppTheme.dimens.spacingMd)
             ) {
                 repeat(2) { index ->
-                    val color = if (index == 0) AppTheme.color.accent else AppTheme.color.primary
+                    val color = if (index == 0) AppTheme.color.secondary else AppTheme.color.primary
                     NBChip(
                         backgroundColor = color,
                         content = {

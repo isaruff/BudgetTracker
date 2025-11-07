@@ -100,7 +100,10 @@ fun NBClickableContainer(
             CompositionLocalProvider(
                 LocalContentColor provides contentColor
             ) {
-                content()
+                Box(
+                    Modifier.padding(end = AppTheme.dimens.cornerSm),
+                    content = content
+                )
             }
         }
     )

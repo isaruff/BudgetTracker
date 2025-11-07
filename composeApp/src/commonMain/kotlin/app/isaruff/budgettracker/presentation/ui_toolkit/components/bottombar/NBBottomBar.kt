@@ -30,7 +30,7 @@ fun NBBottomBar(
 ) {
     Row(
         modifier = modifier.drawTopBorder(
-            color = AppTheme.color.border,
+            color = AppTheme.color.outline,
         )
     ) {
         items.forEachIndexed { index, item ->
@@ -40,7 +40,7 @@ fun NBBottomBar(
                     .weight(1f)
                     .drawItemDivider(
                         itemPosition = position,
-                        color = AppTheme.color.border
+                        color = AppTheme.color.outline
                     ),
                 isSelected = item == selected,
                 data = item,
@@ -132,7 +132,7 @@ private fun ItemPrev() {
                 id = "id",
                 icon = Res.drawable.compose_multiplatform,
                 tint = AppTheme.color.onBackground,
-                accent = AppTheme.color.accent
+                accent = AppTheme.color.secondary
             ),
             onClick = {}
         )
@@ -176,7 +176,7 @@ private val prevItems
             id = "a",
             icon = Res.drawable.compose_multiplatform,
             tint = AppTheme.color.onBackground,
-            accent = AppTheme.color.accent
+            accent = AppTheme.color.secondary
         ),
         NBBottomBarItem(
             id = "b",

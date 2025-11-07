@@ -23,7 +23,7 @@ object NBLinearProgressBarDefaults {
 
     val BorderColor
         @Composable
-        get() = AppTheme.color.border
+        get() = AppTheme.color.outline
 
     val BorderWidth
         @Composable

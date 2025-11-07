@@ -7,7 +7,7 @@ object NBFocusableContainerDefaults {
 
     val Shape
         @Composable
-        get() = AppTheme.shapes.medium
+        get() = AppTheme.shapes.flat
 
     val BackgroundColor
         @Composable
@@ -19,7 +19,7 @@ object NBFocusableContainerDefaults {
 
     val BorderColor
         @Composable
-        get() = AppTheme.color.border
+        get() = AppTheme.color.outline
 
     val Elevation
         @Composable

@@ -1,17 +1,17 @@
 package app.isaruff.budgettracker.presentation.ui_toolkit.theme
 
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 
 @Composable
 fun AppTheme(
-    isDarkTheme: Boolean = false,
+    isDarkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {
-    val colorScheme = if (isDarkTheme) DarkNeobrutalColorScheme else LightNeobrutalColorScheme
-
+    val colorScheme = if (isDarkTheme) DarkNeoBrutal else LightNeoBrutal
     CompositionLocalProvider(
-        LocalColorScheme provides colorScheme,
+        LocalColorSchemeV2 provides colorScheme,
         LocalTypography provides AppTypography,
         LocalDimens provides DefaultAppDimensions,
         LocalAppShapes provides DefaultAppShapes
@@ -27,7 +27,7 @@ object AppTheme {
 
     val color
         @Composable
-        get() = LocalColorScheme.current
+        get() = LocalColorSchemeV2.current
 
     val dimens
         @Composable

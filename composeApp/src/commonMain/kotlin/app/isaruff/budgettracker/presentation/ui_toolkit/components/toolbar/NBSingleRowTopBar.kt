@@ -32,7 +32,7 @@ fun NBSingleRowTopBar(
                 minHeight = AppTheme.dimens.containerSizeMd
             )
             .drawUnderline(
-                borderColor = AppTheme.color.border,
+                borderColor = AppTheme.color.outline,
                 borderWidthPx = 10f
             )
             .statusBarsPadding()

@@ -3,67 +3,68 @@ package app.isaruff.budgettracker.presentation.ui_toolkit.theme
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 
-val LocalColorScheme = staticCompositionLocalOf { LightNeobrutalColorScheme }
+val LocalColorSchemeV2 = staticCompositionLocalOf { LightNeoBrutal }
 
+
+val ChalkWhite = Color(0xFFFFFCF5)
+val GraphiteBlack = Color(0xFF1C1C1C)
+val IronGray = Color(0xFF2A2A2A)
+val InkBlack = Color(0xFF1A1A1A)
+val PaperWhite = Color(0xFFFFFFFF)
+val BoneWhite = Color(0xFFF5F5F5)
+val ChalkOutline = Color(0xFFFFFFFF)
 val OrangeAccent = Color(0xFFFF9F1C)
-val VividRed = Color(0xFFE71D36)
 val TealPop = Color(0xFF2EC4B6)
-val OffWhite = Color(0xFFFDFFFC)
-val DeepNavy = Color(0xFF011627)
-val PureWhite = Color(0xFFFFFFFF)
-val NavySurface = Color(0xFF0B1B2B)
-val DarkGrayText = Color(0xFF3D3D3D)
-val LightGrayText = Color(0xFFB8C2CC)
+val MintSuccess = Color(0xFF70C1B3)
+val LemonWarning = Color(0xFFF3C623)
+val VividRed = Color(0xFFE71D36)
+val InkText = Color(0xFF0D0D0D)
+val CharcoalText = Color(0xFF121212)
+val SnowText = Color(0xFFFFFFFF)
+val OffWhiteText = Color(0xFFF5F5F5)
+val SolidBlackText = Color(0xFF000000)
 
-data class AppColorScheme(
+data class NeoBrutalColorScheme(
     val background: Color,
-    val onBackground: Color,
     val surface: Color,
-    val onSurface: Color,
+    val outline: Color,
     val primary: Color,
-    val onPrimary: Color,
     val secondary: Color,
-    val onSecondary: Color,
-    val accent: Color,
-    val onAccent: Color,
-    val textPrimary: Color,
-    val textSecondary: Color,
-    val border: Color,
-    val error: Color
+    val success: Color,
+    val warning: Color,
+    val error: Color,
+    val onBackground: Color,
+    val onSurface: Color,
+    val onPrimary: Color,
+    val onSecondary: Color
 )
 
-val LightNeobrutalColorScheme = AppColorScheme(
-    background = OffWhite,
-    onBackground = DeepNavy,
-    surface = PureWhite,
-    onSurface = DeepNavy,
-    primary = OrangeAccent,
-    onPrimary = DeepNavy,
-    secondary = TealPop,
-    onSecondary = DeepNavy,
-    accent = VividRed,
-    onAccent = OffWhite,
-    textPrimary = DeepNavy,
-    textSecondary = DarkGrayText,
-    border = DeepNavy,
-    error = VividRed
-)
-
-val DarkNeobrutalColorScheme = AppColorScheme(
-    background = DeepNavy,
-    onBackground = OffWhite,
-    surface = NavySurface,
-    onSurface = OffWhite,
+val LightNeoBrutal = NeoBrutalColorScheme(
+    background = ChalkWhite,
+    surface = PaperWhite,
+    outline = InkBlack,
     primary = TealPop,
-    onPrimary = OffWhite,
     secondary = OrangeAccent,
-    onSecondary = DeepNavy,
-    accent = VividRed,
-    onAccent = OffWhite,
-    textPrimary = OffWhite,
-    textSecondary = LightGrayText,
-    border = TealPop,
-    error = VividRed
+    success = MintSuccess,
+    warning = LemonWarning,
+    error = VividRed,
+    onBackground = InkText,
+    onSurface = CharcoalText,
+    onPrimary = SolidBlackText,
+    onSecondary = SolidBlackText
 )
 
-
+val DarkNeoBrutal = NeoBrutalColorScheme(
+    background = GraphiteBlack,
+    surface = IronGray,
+    outline = ChalkOutline,
+    primary = TealPop,
+    secondary = OrangeAccent,
+    success = MintSuccess,
+    warning = LemonWarning,
+    error = VividRed,
+    onBackground = SnowText,
+    onSurface = OffWhiteText,
+    onPrimary = SolidBlackText,
+    onSecondary = SolidBlackText
+)

@@ -8,6 +8,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.unit.Dp
+import app.isaruff.budgettracker.presentation.ui_toolkit.components.container.core.clickable.NBCLickableContainerDefaults
 import app.isaruff.budgettracker.presentation.ui_toolkit.components.container.core.clickable.NBClickableContainer
 import app.isaruff.budgettracker.presentation.ui_toolkit.theme.AppTheme
 import budgettracker.composeapp.generated.resources.Res
@@ -20,21 +23,33 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 fun NBIconButton(
     iconRes: DrawableResource,
     modifier: Modifier = Modifier,
+    size: Dp = AppTheme.dimens.iconSizeMd,
     tint: Color = AppTheme.color.onPrimary,
     enabled: Boolean = true,
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
+    shape: Shape = NBCLickableContainerDefaults.Shape,
+    background: Color = NBCLickableContainerDefaults.BackgroundColor,
+    borderColor: Color = NBCLickableContainerDefaults.BorderColor,
+    contentColor: Color = NBCLickableContainerDefaults.ContentColor,
+    elevation: Dp = NBCLickableContainerDefaults.Elevation,
+    contentPaddingValues: PaddingValues = PaddingValues(AppTheme.dimens.spacingSm),
     onClick: () -> Unit,
 ) {
     NBClickableContainer(
         modifier = modifier,
+        shape = shape,
+        background = background,
+        borderColor = borderColor,
+        contentColor = contentColor,
+        elevation = elevation,
         interactionSource = interactionSource,
         enabled = enabled,
         onClick = onClick
     ) {
         Icon(
             modifier = Modifier
-                .padding(AppTheme.dimens.spacingSm)
-                .size(AppTheme.dimens.iconSizeMd),
+                .padding(contentPaddingValues)
+                .size(size),
             painter = painterResource(iconRes),
             tint = tint,
             contentDescription = null

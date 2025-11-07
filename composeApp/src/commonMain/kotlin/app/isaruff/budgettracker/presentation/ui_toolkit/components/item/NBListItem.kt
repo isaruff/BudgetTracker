@@ -13,7 +13,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import app.isaruff.budgettracker.presentation.ui_toolkit.components.container.core.static.NBContainer
+import app.isaruff.budgettracker.presentation.ui_toolkit.components.container.core.clickable.NBClickableContainer
 import app.isaruff.budgettracker.presentation.ui_toolkit.components.container.core.static.NBContainerDefaults
 import app.isaruff.budgettracker.presentation.ui_toolkit.theme.AppTheme
 import budgettracker.composeapp.generated.resources.Res
@@ -29,6 +29,7 @@ fun NBListItem(
     supportingContent: (@Composable () -> Unit)? = null,
     leadingContent: (@Composable () -> Unit)? = null,
     trailingContent: (@Composable () -> Unit)? = null,
+    onClick: (() -> Unit)? = null,
     verticalPadding: Dp = AppTheme.dimens.spacingSm,
     horizontalPadding: Dp = AppTheme.dimens.spacingMd,
     spacingBetween: Dp = AppTheme.dimens.spacingMd,
@@ -38,13 +39,15 @@ fun NBListItem(
     contentColor: Color = NBContainerDefaults.ContentColor,
     elevation: Dp = NBContainerDefaults.Elevation,
 ) {
-    NBContainer(
+    NBClickableContainer(
         modifier = modifier,
         shape = shape,
         background = background,
         borderColor = borderColor,
         contentColor = contentColor,
-        elevation = elevation
+        elevation = elevation,
+        enabled = onClick != null,
+        onClick = { onClick?.invoke() }
     ) {
         Row(
             modifier = Modifier
@@ -66,21 +69,21 @@ fun NBListItem(
             ) {
                 if (overlineContent != null) {
                     ProvideTextStyle(AppTheme.typography.labelSmall) {
-                        CompositionLocalProvider(LocalContentColor provides AppTheme.color.textSecondary) {
+                        CompositionLocalProvider(LocalContentColor provides AppTheme.color.surface) {
                             overlineContent()
                         }
                     }
                 }
 
                 ProvideTextStyle(AppTheme.typography.bodyLarge) {
-                    CompositionLocalProvider(LocalContentColor provides AppTheme.color.textPrimary) {
+                    CompositionLocalProvider(LocalContentColor provides AppTheme.color.surface) {
                         headlineContent()
                     }
                 }
 
                 if (supportingContent != null) {
                     ProvideTextStyle(AppTheme.typography.bodySmall) {
-                        CompositionLocalProvider(LocalContentColor provides AppTheme.color.textSecondary) {
+                        CompositionLocalProvider(LocalContentColor provides AppTheme.color.onBackground) {
                             supportingContent()
                         }
                     }
@@ -89,7 +92,7 @@ fun NBListItem(
 
             if (trailingContent != null) {
                 ProvideTextStyle(AppTheme.typography.bodySmall) {
-                    CompositionLocalProvider(LocalContentColor provides AppTheme.color.textSecondary) {
+                    CompositionLocalProvider(LocalContentColor provides AppTheme.color.onBackground) {
                         Box(modifier = Modifier.padding(start = spacingBetween)) {
                             trailingContent()
                         }
