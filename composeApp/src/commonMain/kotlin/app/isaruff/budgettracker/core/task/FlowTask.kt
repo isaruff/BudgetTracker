@@ -13,5 +13,6 @@ import kotlinx.coroutines.flow.Flow
  * domain operation.
  * */
 interface FlowTask<in T, out R> {
+
     fun buildFlow(params: T): Flow<R>
 }
