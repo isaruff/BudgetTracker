@@ -69,14 +69,14 @@ fun NBListItem(
             ) {
                 if (overlineContent != null) {
                     ProvideTextStyle(AppTheme.typography.labelSmall) {
-                        CompositionLocalProvider(LocalContentColor provides AppTheme.color.surface) {
+                        CompositionLocalProvider(LocalContentColor provides AppTheme.color.onSurface) {
                             overlineContent()
                         }
                     }
                 }
 
                 ProvideTextStyle(AppTheme.typography.bodyLarge) {
-                    CompositionLocalProvider(LocalContentColor provides AppTheme.color.surface) {
+                    CompositionLocalProvider(LocalContentColor provides AppTheme.color.onSurface) {
                         headlineContent()
                     }
                 }

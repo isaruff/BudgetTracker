@@ -24,7 +24,7 @@ fun NBIconButton(
     iconRes: DrawableResource,
     modifier: Modifier = Modifier,
     size: Dp = AppTheme.dimens.iconSizeMd,
-    tint: Color = AppTheme.color.onPrimary,
+    tint: Color = AppTheme.color.onSurface,
     enabled: Boolean = true,
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
     shape: Shape = NBCLickableContainerDefaults.Shape,
@@ -32,7 +32,7 @@ fun NBIconButton(
     borderColor: Color = NBCLickableContainerDefaults.BorderColor,
     contentColor: Color = NBCLickableContainerDefaults.ContentColor,
     elevation: Dp = NBCLickableContainerDefaults.Elevation,
-    contentPaddingValues: PaddingValues = PaddingValues(AppTheme.dimens.spacingSm),
+    contentPaddingValues: PaddingValues = PaddingValues(AppTheme.dimens.spacingXs),
     onClick: () -> Unit,
 ) {
     NBClickableContainer(

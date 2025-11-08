@@ -3,26 +3,35 @@ package app.isaruff.budgettracker.presentation.ui_toolkit.theme
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 
-val LocalColorSchemeV2 = staticCompositionLocalOf { LightNeoBrutal }
+val LocalColorScheme = staticCompositionLocalOf { NeoBrutalLight }
 
 
-val ChalkWhite = Color(0xFFFFFCF5)
-val GraphiteBlack = Color(0xFF1C1C1C)
-val IronGray = Color(0xFF2A2A2A)
-val InkBlack = Color(0xFF1A1A1A)
-val PaperWhite = Color(0xFFFFFFFF)
-val BoneWhite = Color(0xFFF5F5F5)
-val ChalkOutline = Color(0xFFFFFFFF)
-val OrangeAccent = Color(0xFFFF9F1C)
-val TealPop = Color(0xFF2EC4B6)
-val MintSuccess = Color(0xFF70C1B3)
-val LemonWarning = Color(0xFFF3C623)
-val VividRed = Color(0xFFE71D36)
-val InkText = Color(0xFF0D0D0D)
-val CharcoalText = Color(0xFF121212)
-val SnowText = Color(0xFFFFFFFF)
-val OffWhiteText = Color(0xFFF5F5F5)
-val SolidBlackText = Color(0xFF000000)
+// Base structural tones
+val BrutalCream = Color(0xFFFFFBEA)
+val BrutalWhite = Color(0xFFFFFFFF)
+val BrutalBlack = Color(0xFF000000)
+val BrutalCharcoal = Color(0xFF1C1D21)
+val BrutalIron = Color(0xFF2B2C31)
+
+// Vibrant action tones
+val BrutalBlue = Color(0xFF118AB2)
+val BrutalCyan = Color(0xFF4CC9F0)
+val BrutalYellow = Color(0xFFFFD166)
+val BrutalGold = Color(0xFFEFBF57)
+val BrutalViolet = Color(0xFFB388EB)
+val BrutalLavender = Color(0xFFC29FFF)
+
+// Functional tones
+val BrutalGreen = Color(0xFF06D6A0)
+val BrutalMint = Color(0xFF4ADE80)
+val BrutalAmber = Color(0xFFF3C623)
+val BrutalSun = Color(0xFFF7D154)
+val BrutalRed = Color(0xFFEF476F)
+val BrutalPink = Color(0xFFFF6584)
+
+val BrutalGrey = Color(0xFF333333)
+val BrutalPaleWhite = Color(0xFFE8E8E8)
+
 
 data class NeoBrutalColorScheme(
     val background: Color,
@@ -30,41 +39,53 @@ data class NeoBrutalColorScheme(
     val outline: Color,
     val primary: Color,
     val secondary: Color,
+    val tertiary: Color,
     val success: Color,
     val warning: Color,
     val error: Color,
+    val textPrimary: Color,
+    val textSecondary: Color,
     val onBackground: Color,
     val onSurface: Color,
     val onPrimary: Color,
-    val onSecondary: Color
+    val onSecondary: Color,
+    val onTertiary: Color
 )
 
-val LightNeoBrutal = NeoBrutalColorScheme(
-    background = ChalkWhite,
-    surface = PaperWhite,
-    outline = InkBlack,
-    primary = TealPop,
-    secondary = OrangeAccent,
-    success = MintSuccess,
-    warning = LemonWarning,
-    error = VividRed,
-    onBackground = InkText,
-    onSurface = CharcoalText,
-    onPrimary = SolidBlackText,
-    onSecondary = SolidBlackText
+val NeoBrutalLight = NeoBrutalColorScheme(
+    background = BrutalCream,
+    surface = BrutalWhite,
+    outline = BrutalBlack,
+    primary = BrutalBlue,
+    secondary = BrutalYellow,
+    tertiary = BrutalViolet,
+    success = BrutalGreen,
+    warning = BrutalAmber,
+    error = BrutalRed,
+    textPrimary = BrutalBlack,
+    textSecondary = BrutalGrey,
+    onBackground = BrutalBlack,
+    onSurface = BrutalBlack,
+    onPrimary = BrutalWhite,
+    onSecondary = BrutalBlack,
+    onTertiary = BrutalWhite
 )
 
-val DarkNeoBrutal = NeoBrutalColorScheme(
-    background = GraphiteBlack,
-    surface = IronGray,
-    outline = ChalkOutline,
-    primary = TealPop,
-    secondary = OrangeAccent,
-    success = MintSuccess,
-    warning = LemonWarning,
-    error = VividRed,
-    onBackground = SnowText,
-    onSurface = OffWhiteText,
-    onPrimary = SolidBlackText,
-    onSecondary = SolidBlackText
+val NeoBrutalDark = NeoBrutalColorScheme(
+    background = BrutalCharcoal,
+    surface = BrutalIron,
+    outline = BrutalWhite,
+    primary = BrutalCyan,
+    secondary = BrutalGold,
+    tertiary = BrutalLavender,
+    success = BrutalMint,
+    warning = BrutalSun,
+    error = BrutalPink,
+    textPrimary = BrutalWhite,
+    textSecondary = BrutalPaleWhite,
+    onBackground = BrutalWhite,
+    onSurface = BrutalWhite,
+    onPrimary = BrutalBlack,
+    onSecondary = BrutalBlack,
+    onTertiary = BrutalBlack
 )

@@ -1,10 +1,10 @@
-package app.isaruff.budgettracker.core.mvi.viewmodel
+package app.isaruff.budgettracker.libs.core.mvi.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.isaruff.budgettracker.core.mvi.SideEffect
-import app.isaruff.budgettracker.core.mvi.UiEvent
-import app.isaruff.budgettracker.core.mvi.UiState
+import app.isaruff.budgettracker.libs.core.mvi.SideEffect
+import app.isaruff.budgettracker.libs.core.mvi.UiEvent
+import app.isaruff.budgettracker.libs.core.mvi.UiState
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow

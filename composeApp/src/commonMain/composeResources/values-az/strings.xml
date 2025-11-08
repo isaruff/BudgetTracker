@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="title_accounts">Hesablar</string>
+    <string name="label_total_balance">Ümumi balans</string>
+    <string name="action_add">+Əlavə et</string>
+</resources>

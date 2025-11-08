@@ -1,4 +1,4 @@
-package app.isaruff.budgettracker.core.task
+package app.isaruff.budgettracker.libs.core.task
 
 /**
  * Represents a synchronous, non-suspending unit of business logic.

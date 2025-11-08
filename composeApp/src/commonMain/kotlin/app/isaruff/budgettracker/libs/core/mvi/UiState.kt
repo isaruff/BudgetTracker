@@ -1,4 +1,4 @@
-package app.isaruff.budgettracker.core.mvi
+package app.isaruff.budgettracker.libs.core.mvi
 
 /**
  * Marker interface for defining the **complete representation of UI state** in an MVI architecture.

@@ -9,9 +9,9 @@ fun AppTheme(
     isDarkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {
-    val colorScheme = if (isDarkTheme) DarkNeoBrutal else LightNeoBrutal
+    val colorScheme = if (isDarkTheme) NeoBrutalDark else NeoBrutalLight
     CompositionLocalProvider(
-        LocalColorSchemeV2 provides colorScheme,
+        LocalColorScheme provides colorScheme,
         LocalTypography provides AppTypography,
         LocalDimens provides DefaultAppDimensions,
         LocalAppShapes provides DefaultAppShapes
@@ -27,7 +27,7 @@ object AppTheme {
 
     val color
         @Composable
-        get() = LocalColorSchemeV2.current
+        get() = LocalColorScheme.current
 
     val dimens
         @Composable

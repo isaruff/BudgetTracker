@@ -51,12 +51,13 @@ fun NBButton(
 }
 
 @Composable
-private fun NBButton(
+fun NBButton(
     text: String,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
+    contentPadding: PaddingValues = PaddingValues(AppTheme.dimens.spacingSm),
     shape: Shape = NBCLickableContainerDefaults.Shape,
     background: Color = NBCLickableContainerDefaults.BackgroundColor,
     borderColor: Color = NBCLickableContainerDefaults.BorderColor,
@@ -64,7 +65,7 @@ private fun NBButton(
     elevation: Dp = NBCLickableContainerDefaults.Elevation
 ) {
     NBButton(
-        modifier = modifier,
+        modifier = modifier.defaultMinSize(minHeight = AppTheme.dimens.spacingXl),
         onClick = onClick,
         enabled = enabled,
         interactionSource = interactionSource,
@@ -76,7 +77,7 @@ private fun NBButton(
     ) {
         Text(
             modifier = Modifier
-                .padding(AppTheme.dimens.spacingSm),
+                .padding(contentPadding),
             text = text,
             textAlign = TextAlign.Center,
             style = AppTheme.typography.labelLarge

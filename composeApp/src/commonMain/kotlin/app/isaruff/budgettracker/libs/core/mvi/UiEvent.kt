@@ -1,4 +1,4 @@
-package app.isaruff.budgettracker.core.mvi
+package app.isaruff.budgettracker.libs.core.mvi
 
 /**
  * Marker interface for defining **user-originated inputs** in an MVI architecture.
